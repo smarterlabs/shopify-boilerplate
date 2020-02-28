@@ -12,14 +12,14 @@
  * @param {String} size - A shopify image size attribute
  */
 export function preload (images, size) {
-  if (typeof images === 'string') {
-    images = [images]
-  }
+	if (typeof images === `string`) {
+		images = [images]
+	}
 
-  for (var i = 0; i < images.length; i++) {
-    var image = images[i]
-    loadImage(getSizedImageUrl(image, size))
-  }
+	for (var i = 0; i < images.length; i++) {
+		var image = images[i]
+		loadImage(getSizedImageUrl(image, size))
+	}
 }
 
 /**
@@ -27,7 +27,7 @@ export function preload (images, size) {
  * @param {string} path - An image url
  */
 export function loadImage (path) {
-  /* eslint-disable */
+	/* eslint-disable */
   new Image().src = path
   /* eslint-enable */
 }
@@ -39,7 +39,7 @@ export function loadImage (path) {
  * @returns {null}
  */
 export function imageSize (src) {
-  /* eslint-disable */
+	/* eslint-disable */
   var match = src.match(/.+_((?:pico|icon|thumb|small|compact|medium|large|grande)|\d{1,4}x\d{0,4}|x\d{1,4})[_\.@]/)
   /* esling-enable */
 

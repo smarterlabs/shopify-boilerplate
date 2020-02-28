@@ -11,18 +11,18 @@ import product from '@/components/product.js'
 import productCounter from '@/components/product-counter.js'
 
 const state = {
-  cartOpen: false
+	cartOpen: false,
 }
 
 const components = {
-  slaterWelcome,
-  accountLogin,
-  header,
-  productSelection,
-  cartDrawer,
-  cartDrawerItem,
-  product,
-  productCounter
+	slaterWelcome,
+	accountLogin,
+	header,
+	productSelection,
+	cartDrawer,
+	cartDrawerItem,
+	product,
+	productCounter,
 }
 
 export default picoapp(components, state)

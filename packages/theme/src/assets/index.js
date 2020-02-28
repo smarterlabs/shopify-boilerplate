@@ -1,371 +1,371 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	var installedModules = {}
+	/******/
+	/******/ 	// The require function
+	/******/ 	function __webpack_require__(moduleId) {
+		/******/
+		/******/ 		// Check if module is in cache
+		/******/ 		if(installedModules[moduleId]) {
+			/******/ 			return installedModules[moduleId].exports
+			/******/ 		}
+		/******/ 		// Create a new module (and put it into the cache)
+		/******/ 		var module = installedModules[moduleId] = {
+			/******/ 			i: moduleId,
+			/******/ 			l: false,
+			/******/ 			exports: {},
+			/******/ 		}
+		/******/
+		/******/ 		// Execute the module function
+		/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__)
+		/******/
+		/******/ 		// Flag the module as loaded
+		/******/ 		module.l = true
+		/******/
+		/******/ 		// Return the exports of the module
+		/******/ 		return module.exports
+		/******/ 	}
+	/******/
+	/******/
+	/******/ 	// expose the modules object (__webpack_modules__)
+	/******/ 	__webpack_require__.m = modules
+	/******/
+	/******/ 	// expose the module cache
+	/******/ 	__webpack_require__.c = installedModules
+	/******/
+	/******/ 	// define getter function for harmony exports
+	/******/ 	__webpack_require__.d = function(exports, name, getter) {
+		/******/ 		if(!__webpack_require__.o(exports, name)) {
+			/******/ 			Object.defineProperty(exports, name, {
+				/******/ 				configurable: false,
+				/******/ 				enumerable: true,
+				/******/ 				get: getter,
+				/******/ 			})
+			/******/ 		}
+		/******/ 	}
+	/******/
+	/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+	/******/ 	__webpack_require__.n = function(module) {
+		/******/ 		var getter = module && module.__esModule ?
+		/******/ 			function getDefault() { return module[`default`] } :
+		/******/ 			function getModuleExports() { return module }
+		/******/ 		__webpack_require__.d(getter, `a`, getter)
+		/******/ 		return getter
+		/******/ 	}
+	/******/
+	/******/ 	// Object.prototype.hasOwnProperty.call
+	/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property) }
+	/******/
+	/******/ 	// __webpack_public_path__
+	/******/ 	__webpack_require__.p = ``
+	/******/
+	/******/ 	// Load entry module and return exports
+	/******/ 	return __webpack_require__(__webpack_require__.s = 1)
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+		"use strict"
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.on = undefined;
-exports.addVariant = addVariant;
-exports.updateAddon = updateAddon;
-exports.removeAddon = removeAddon;
-exports.addItemById = addItemById;
-exports.fetchCart = fetchCart;
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
+		exports.on = undefined
+		exports.addVariant = addVariant
+		exports.updateAddon = updateAddon
+		exports.removeAddon = removeAddon
+		exports.addItemById = addItemById
+		exports.fetchCart = fetchCart
 
-var _unfetch = __webpack_require__(9);
+		var _unfetch = __webpack_require__(9)
 
-var _unfetch2 = _interopRequireDefault(_unfetch);
+		var _unfetch2 = _interopRequireDefault(_unfetch)
 
-var _mitt = __webpack_require__(3);
+		var _mitt = __webpack_require__(3)
 
-var _mitt2 = _interopRequireDefault(_mitt);
+		var _mitt2 = _interopRequireDefault(_mitt)
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj } }
 
-var ev = (0, _mitt2.default)();
+		var ev = (0, _mitt2.default)()
 
-var on = exports.on = ev.on;
+		var on = exports.on = ev.on
 
-function addVariant(variant, quantity) {
-  var numAvailable = variant.inventory_policy === 'deny' && variant.inventory_management === 'shopify' ? variant.inventory_quantity : null; // null means they can add as many as they want
+		function addVariant(variant, quantity) {
+			var numAvailable = variant.inventory_policy === `deny` && variant.inventory_management === `shopify` ? variant.inventory_quantity : null // null means they can add as many as they want
 
-  return fetchCart().then(function (_ref) {
-    var items = _ref.items;
+			return fetchCart().then(function (_ref) {
+				var items = _ref.items
 
-    var existing = items.filter(function (item) {
-      return item.id === variant.id;
-    })[0] || {};
-    var numRequested = (existing.quantity || 0) + quantity;
+				var existing = items.filter(function (item) {
+					return item.id === variant.id
+				})[0] || {}
+				var numRequested = (existing.quantity || 0) + quantity
 
-    if (numAvailable !== null && numRequested > numAvailable) {
-      var err = 'There are only ' + numAvailable + ' of that product available, requested ' + numRequested + '.';
-      ev.emit('error', err);
-      throw new Error(err);
-    } else {
-      return addItemById(variant.id, quantity);
-    }
-  });
-}
+				if (numAvailable !== null && numRequested > numAvailable) {
+					var err = `There are only ` + numAvailable + ` of that product available, requested ` + numRequested + `.`
+					ev.emit(`error`, err)
+					throw new Error(err)
+				} else {
+					return addItemById(variant.id, quantity)
+				}
+			})
+		}
 
-function updateAddon(id, quantity) {
-  return fetchCart().then(function (_ref2) {
-    var items = _ref2.items;
+		function updateAddon(id, quantity) {
+			return fetchCart().then(function (_ref2) {
+				var items = _ref2.items
 
-    for (var i = 0; i < items.length; i++) {
-      if (items[i].variant_id === parseInt(id)) {
-        return changeAddon(i + 1, quantity); // shopify cart is a 1-based index
-      }
-    }
-  });
-}
+				for (var i = 0; i < items.length; i++) {
+					if (items[i].variant_id === parseInt(id)) {
+						return changeAddon(i + 1, quantity) // shopify cart is a 1-based index
+					}
+				}
+			})
+		}
 
-function removeAddon(id) {
-  return updateAddon(id, 0);
-}
+		function removeAddon(id) {
+			return updateAddon(id, 0)
+		}
 
-function changeAddon(line, quantity) {
-  ev.emit('updating');
+		function changeAddon(line, quantity) {
+			ev.emit(`updating`)
 
-  return (0, _unfetch2.default)('/cart/change.js', {
-    method: 'POST',
-    credentials: 'include',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ line: line, quantity: quantity })
-  }).then(function (res) {
-    return res.json();
-  }).then(function (cart) {
-    ev.emit('addon', { item: null, cart: cart });
-    return cart;
-  });
-}
+			return (0, _unfetch2.default)(`/cart/change.js`, {
+				method: `POST`,
+				credentials: `include`,
+				headers: {
+					'Content-Type': `application/json`,
+				},
+				body: JSON.stringify({ line: line, quantity: quantity }),
+			}).then(function (res) {
+				return res.json()
+			}).then(function (cart) {
+				ev.emit(`addon`, { item: null, cart: cart })
+				return cart
+			})
+		}
 
-/**
+		/**
  * Warning: this does not check available products first
  */
-function addItemById(id, quantity) {
-  ev.emit('updating');
+		function addItemById(id, quantity) {
+			ev.emit(`updating`)
 
-  return (0, _unfetch2.default)('/cart/add.js', {
-    method: 'POST',
-    credentials: 'include',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ id: id, quantity: quantity })
-  }).then(function (r) {
-    return r.json();
-  }).then(function (item) {
-    return fetchCart().then(function (cart) {
-      ev.emit('updated', { item: item, cart: cart });
-      return { item: item, cart: cart };
-    });
-  });
-}
+			return (0, _unfetch2.default)(`/cart/add.js`, {
+				method: `POST`,
+				credentials: `include`,
+				headers: {
+					'Content-Type': `application/json`,
+				},
+				body: JSON.stringify({ id: id, quantity: quantity }),
+			}).then(function (r) {
+				return r.json()
+			}).then(function (item) {
+				return fetchCart().then(function (cart) {
+					ev.emit(`updated`, { item: item, cart: cart })
+					return { item: item, cart: cart }
+				})
+			})
+		}
 
-function fetchCart() {
-  return (0, _unfetch2.default)('/cart.js', {
-    method: 'GET',
-    credentials: 'include'
-  }).then(function (res) {
-    return res.json();
-  });
-}
+		function fetchCart() {
+			return (0, _unfetch2.default)(`/cart.js`, {
+				method: `GET`,
+				credentials: `include`,
+			}).then(function (res) {
+				return res.json()
+			})
+		}
 
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+		/***/ }),
+	/* 1 */
+	/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-var _router = __webpack_require__(2);
-
-var _router2 = _interopRequireDefault(_router);
-
-var _picoapp = __webpack_require__(10);
-
-var _picoapp2 = _interopRequireDefault(_picoapp);
-
-var _header = __webpack_require__(4);
-
-var _header2 = _interopRequireDefault(_header);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var init = function init(types) {
-  return function () {
-    var ctx = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document;
-
-    for (var type in types) {
-      var attr = 'data-' + type;
-      var nodes = [].slice.call(ctx.querySelectorAll('[' + attr + ']'));
-
-      for (var i = 0; i < nodes.length; i++) {
-        try {
-          __webpack_require__(30)(types[type] + nodes[i].getAttribute(attr) + '.js').default(nodes[i]);
-        } catch (e) {
-          console.error(e);
-        }
-      }
-    }
-  };
-};
-
-// document.addEventListener('DOMContentLoaded', e => {
-//   init({
-//     component: './components/',
-//     page: './pages/'
-//   })()
-// })
-//
-// /**
-//  * Script management
-//  */
-// scripts.init({
-//   component: 'components/',
-//   util: 'util/'
-// })
-//
-// scripts.mount()
-
-var app = (0, _picoapp2.default)({
-  header: _header2.default
-});
-
-app.mount();
-
-_router2.default.on('afterRender', function () {
-  console.log('route rendered!');
-  app.unmount();
-  setTimeout(function () {
-    app.mount();
-  }, 0);
-});
-
-console.groupCollapsed('Slater credits 🍝  pew');
-console.log('Development by The Couch https://thecouch.nyc');
-console.groupEnd();
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
+		"use strict"
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+		var _router = __webpack_require__(2)
 
-var _operator = __webpack_require__(25);
+		var _router2 = _interopRequireDefault(_router)
 
-var _operator2 = _interopRequireDefault(_operator);
+		var _picoapp = __webpack_require__(10)
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+		var _picoapp2 = _interopRequireDefault(_picoapp)
 
-// import * as scripts from 'micromanager'
+		var _header = __webpack_require__(4)
 
-var router = (0, _operator2.default)({
-  transitionSpeed: 400,
-  routes: {}
-});
+		var _header2 = _interopRequireDefault(_header)
 
-// router.addRoute('*', () => {
-//   const cache = scripts.cache.dump()
-//   let modules = []
-//
-//   for (let key in cache) {
-//     modules.push(cache[key])
-//   }
-//
-//   return Promise.all(modules.map(mod => {
-//     return mod.leave ? mod.leave() : mod
-//   }))
-// })
+		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj } }
 
-router.on('afterRender', function (requestedRoute) {
-  // const cartDrawer = scripts.cache.get('cart-drawer')
-  // cartDrawer && cartDrawer.close()
+		var init = function init(types) {
+			return function () {
+				var ctx = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document
 
-  var pageTransition = document.getElementById('pageTransition');
-  setTimeout(function () {
-    pageTransition.classList.remove('cover');
-  }, 600);
-});
+				for (var type in types) {
+					var attr = `data-` + type
+					var nodes = [].slice.call(ctx.querySelectorAll(`[` + attr + `]`))
 
-router.on('beforeRender', function (requestedRoute) {
-  var root = document.getElementById('root');
-  var pageTransition = document.getElementById('pageTransition');
+					for (var i = 0; i < nodes.length; i++) {
+						try {
+							__webpack_require__(30)(types[type] + nodes[i].getAttribute(attr) + `.js`).default(nodes[i])
+						} catch (e) {
+							console.error(e)
+						}
+					}
+				}
+			}
+		}
 
-  root.classList.add('moving');
-  pageTransition.classList.add('cover');
-  setTimeout(function () {
-    console.log('waiting game');
-  }, 700);
-});
+		// document.addEventListener('DOMContentLoaded', e => {
+		//   init({
+		//     component: './components/',
+		//     page: './pages/'
+		//   })()
+		// })
+		//
+		// /**
+		//  * Script management
+		//  */
+		// scripts.init({
+		//   component: 'components/',
+		//   util: 'util/'
+		// })
+		//
+		// scripts.mount()
 
-exports.default = router;
+		var app = (0, _picoapp2.default)({
+			header: _header2.default,
+		})
 
-/***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+		app.mount()
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//      
-// An event handler can take an optional event argument
-// and should not return a value
+		_router2.default.on(`afterRender`, function () {
+			console.log(`route rendered!`)
+			app.unmount()
+			setTimeout(function () {
+				app.mount()
+			}, 0)
+		})
+
+		console.groupCollapsed(`Slater credits 🍝  pew`)
+		console.log(`Development by The Couch https://thecouch.nyc`)
+		console.groupEnd()
+
+		/***/ }),
+	/* 2 */
+	/***/ (function(module, exports, __webpack_require__) {
+
+		"use strict"
+
+
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
+
+		var _operator = __webpack_require__(25)
+
+		var _operator2 = _interopRequireDefault(_operator)
+
+		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj } }
+
+		// import * as scripts from 'micromanager'
+
+		var router = (0, _operator2.default)({
+			transitionSpeed: 400,
+			routes: {},
+		})
+
+		// router.addRoute('*', () => {
+		//   const cache = scripts.cache.dump()
+		//   let modules = []
+		//
+		//   for (let key in cache) {
+		//     modules.push(cache[key])
+		//   }
+		//
+		//   return Promise.all(modules.map(mod => {
+		//     return mod.leave ? mod.leave() : mod
+		//   }))
+		// })
+
+		router.on(`afterRender`, function (requestedRoute) {
+			// const cartDrawer = scripts.cache.get('cart-drawer')
+			// cartDrawer && cartDrawer.close()
+
+			var pageTransition = document.getElementById(`pageTransition`)
+			setTimeout(function () {
+				pageTransition.classList.remove(`cover`)
+			}, 600)
+		})
+
+		router.on(`beforeRender`, function (requestedRoute) {
+			var root = document.getElementById(`root`)
+			var pageTransition = document.getElementById(`pageTransition`)
+
+			root.classList.add(`moving`)
+			pageTransition.classList.add(`cover`)
+			setTimeout(function () {
+				console.log(`waiting game`)
+			}, 700)
+		})
+
+		exports.default = router
+
+		/***/ }),
+	/* 3 */
+	/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+		"use strict"
+		Object.defineProperty(__webpack_exports__, `__esModule`, { value: true })
+		//      
+		// An event handler can take an optional event argument
+		// and should not return a value
                                           
-// An array of all currently registered event handlers for a type
+		// An array of all currently registered event handlers for a type
                                             
-// A map of event types and their corresponding event handlers.
+		// A map of event types and their corresponding event handlers.
                         
                                    
   
 
-/** Mitt: Tiny (~200b) functional event emitter / pubsub.
+		/** Mitt: Tiny (~200b) functional event emitter / pubsub.
  *  @name mitt
  *  @returns {Mitt}
  */
-function mitt(all                 ) {
-	all = all || Object.create(null);
+		function mitt(all                 ) {
+			all = all || Object.create(null)
 
-	return {
-		/**
+			return {
+				/**
 		 * Register an event handler for the given type.
 		 *
 		 * @param  {String} type	Type of event to listen for, or `"*"` for all events
 		 * @param  {Function} handler Function to call in response to given event
 		 * @memberOf mitt
 		 */
-		on: function on(type        , handler              ) {
-			(all[type] || (all[type] = [])).push(handler);
-		},
+				on: function on(type        , handler              ) {
+					(all[type] || (all[type] = [])).push(handler)
+				},
 
-		/**
+				/**
 		 * Remove an event handler for the given type.
 		 *
 		 * @param  {String} type	Type of event to unregister `handler` from, or `"*"`
 		 * @param  {Function} handler Handler function to remove
 		 * @memberOf mitt
 		 */
-		off: function off(type        , handler              ) {
-			if (all[type]) {
-				all[type].splice(all[type].indexOf(handler) >>> 0, 1);
-			}
-		},
+				off: function off(type        , handler              ) {
+					if (all[type]) {
+						all[type].splice(all[type].indexOf(handler) >>> 0, 1)
+					}
+				},
 
-		/**
+				/**
 		 * Invoke all handlers for the given type.
 		 * If present, `"*"` handlers are invoked after type-matched handlers.
 		 *
@@ -373,164 +373,164 @@ function mitt(all                 ) {
 		 * @param {Any} [evt]  Any value (object is recommended and powerful), passed to each handler
 		 * @memberof mitt
 		 */
-		emit: function emit(type        , evt     ) {
-			(all[type] || []).map(function (handler) { handler(evt); });
-			(all['*'] || []).map(function (handler) { handler(type, evt); });
+				emit: function emit(type        , evt     ) {
+					(all[type] || []).map(function (handler) { handler(evt) });
+					(all[`*`] || []).map(function (handler) { handler(type, evt) })
+				},
+			}
 		}
-	};
-}
 
-/* harmony default export */ __webpack_exports__["default"] = (mitt);
-//# sourceMappingURL=mitt.es.js.map
+		/* harmony default export */ __webpack_exports__[`default`] = (mitt)
+		//# sourceMappingURL=mitt.es.js.map
 
 
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+		/***/ }),
+	/* 4 */
+	/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+		"use strict"
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
 
-var _cart = __webpack_require__(0);
+		var _cart = __webpack_require__(0)
 
-var _picoapp = __webpack_require__(10);
+		var _picoapp = __webpack_require__(10)
 
-exports.default = (0, _picoapp.component)(function (_ref) {
-  var header = _ref.node;
+		exports.default = (0, _picoapp.component)(function (_ref) {
+			var header = _ref.node
 
-  // Handle cart count hard hit
-  console.log('hey header?');
-  var cartCount = header.querySelector('.js-cart-count');
-  var cart = (0, _cart.fetchCart)();
-  cart.then(function (res) {
-    /* eslint-disable */
+			// Handle cart count hard hit
+			console.log(`hey header?`)
+			var cartCount = header.querySelector(`.js-cart-count`)
+			var cart = (0, _cart.fetchCart)()
+			cart.then(function (res) {
+				/* eslint-disable */
     res ? cartCount.innerHTML = res.item_count : null;
     /* eslint-enable */
-  });
-  (0, _cart.on)('updated', function (_ref2) {
-    var cart = _ref2.cart;
+			});
+			(0, _cart.on)(`updated`, function (_ref2) {
+				var cart = _ref2.cart
 
-    cartCount.innerHTML = cart.item_count;
-  });
-  (0, _cart.on)('addon', function (_ref3) {
-    var cart = _ref3.cart;
+				cartCount.innerHTML = cart.item_count
+			});
+			(0, _cart.on)(`addon`, function (_ref3) {
+				var cart = _ref3.cart
 
-    cartCount.innerHTML = cart.item_count;
-  });
-  /**
+				cartCount.innerHTML = cart.item_count
+			})
+			/**
   // * Cart opening
   // */
-  var cartToggles = header.querySelectorAll('.js-cart-drawer-toggle');
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
+			var cartToggles = header.querySelectorAll(`.js-cart-drawer-toggle`)
+			var _iteratorNormalCompletion = true
+			var _didIteratorError = false
+			var _iteratorError = undefined
 
-  try {
-    for (var _iterator = cartToggles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var toggle = _step.value;
+			try {
+				for (var _iterator = cartToggles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+					var toggle = _step.value
 
-      toggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        var cartDrawer = scripts.cache.get('cart-drawer');
-        cartDrawer.open();
-      });
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-});
+					toggle.addEventListener(`click`, function (e) {
+						e.preventDefault()
+						var cartDrawer = scripts.cache.get(`cart-drawer`)
+						cartDrawer.open()
+					})
+				}
+			} catch (err) {
+				_didIteratorError = true
+				_iteratorError = err
+			} finally {
+				try {
+					if (!_iteratorNormalCompletion && _iterator.return) {
+						_iterator.return()
+					}
+				} finally {
+					if (_didIteratorError) {
+						throw _iteratorError
+					}
+				}
+			}
+		})
 
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
+		/***/ }),
+	/* 5 */
+	/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = ProductSelector;
-
-var _mitt = __webpack_require__(3);
-
-var _mitt2 = _interopRequireDefault(_mitt);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function ProductSelector() {
-  var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-    main: '[data-product-select]',
-    options: '[data-single-option-selector]',
-    data: '[data-product-json]'
-  };
-
-  var ev = (0, _mitt2.default)();
-
-  var main = document.querySelector(config.main);
-  var options = [].slice.call(document.querySelectorAll(config.options));
-  var data = JSON.parse(document.querySelector(config.data).innerHTML);
-
-  options.forEach(function (opt) {
-    return opt.addEventListener('change', function (e) {
-      var val = options.reduce(function (res, opt, i) {
-        res += i < options.length - 1 ? opt.value + ' / ' : opt.value;
-        return res;
-      }, '');
-
-      for (var i = 0; i < main.options.length; i++) {
-        if (main.options[i].text === val) {
-          main.selectedIndex = i;
-          break;
-        }
-      }
-
-      ev.emit('update', data.variants.filter(function (v) {
-        return v.title === val;
-      })[0]);
-    });
-  });
-
-  return {
-    on: ev.on,
-    destroy: function destroy() {
-      options.forEach(function (opt) {
-        // opt.removeEventListener('change', updateSelect)
-      });
-    }
-  };
-}
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
+		"use strict"
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.formatMoney = formatMoney;
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
+		exports.default = ProductSelector
 
-var _utils = __webpack_require__(7);
+		var _mitt = __webpack_require__(3)
 
-/**
+		var _mitt2 = _interopRequireDefault(_mitt)
+
+		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj } }
+
+		function ProductSelector() {
+			var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+				main: `[data-product-select]`,
+				options: `[data-single-option-selector]`,
+				data: `[data-product-json]`,
+			}
+
+			var ev = (0, _mitt2.default)()
+
+			var main = document.querySelector(config.main)
+			var options = [].slice.call(document.querySelectorAll(config.options))
+			var data = JSON.parse(document.querySelector(config.data).innerHTML)
+
+			options.forEach(function (opt) {
+				return opt.addEventListener(`change`, function (e) {
+					var val = options.reduce(function (res, opt, i) {
+						res += i < options.length - 1 ? opt.value + ` / ` : opt.value
+						return res
+					}, ``)
+
+					for (var i = 0; i < main.options.length; i++) {
+						if (main.options[i].text === val) {
+							main.selectedIndex = i
+							break
+						}
+					}
+
+					ev.emit(`update`, data.variants.filter(function (v) {
+						return v.title === val
+					})[0])
+				})
+			})
+
+			return {
+				on: ev.on,
+				destroy: function destroy() {
+					options.forEach(function (opt) {
+						// opt.removeEventListener('change', updateSelect)
+					})
+				},
+			}
+		}
+
+		/***/ }),
+	/* 6 */
+	/***/ (function(module, exports, __webpack_require__) {
+
+		"use strict"
+
+
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
+		exports.formatMoney = formatMoney
+
+		var _utils = __webpack_require__(7)
+
+		/**
  * Currency Helpers
  * -----------------------------------------------------------------------------
  * A collection of useful functions that help with currency formatting
@@ -540,7 +540,7 @@ var _utils = __webpack_require__(7);
  *
  */
 
-/**
+		/**
  * Format money values based on your shop currency settings
  * @param  {Number|string} cents - value in cents or dollar amount e.g. 300 cents
  * or 3.00 dollars
@@ -742,16 +742,16 @@ function loadImage(path) {
   /* eslint-disable */
   new Image().src = path;
   /* eslint-enable */
-}
+		}
 
-/**
+		/**
  * Find the Shopify image attribute size
  *
  * @param {string} src
  * @returns {null}
  */
-function imageSize(src) {
-  /* eslint-disable */
+		function imageSize(src) {
+			/* eslint-disable */
   var match = src.match(/.+_((?:pico|icon|thumb|small|compact|medium|large|grande)|\d{1,4}x\d{0,4}|x\d{1,4})[_\.@]/);
   /* esling-enable */
 
@@ -890,317 +890,317 @@ exports.default = function (outer) {
   var recoverIsTarget = window.location.hash.match(/\#recover/) ? true : false;
   /* eslint-enable */
 
-  var successMessage = outer.querySelector('.js-recover-success') !== null;
+			var successMessage = outer.querySelector(`.js-recover-success`) !== null
 
-  if (recoverIsTarget || successMessage) {
-    login.style.display = 'none';
-    recover.style.display = 'block';
-  } else {
-    login.style.display = 'block';
-  }
+			if (recoverIsTarget || successMessage) {
+				login.style.display = `none`
+				recover.style.display = `block`
+			} else {
+				login.style.display = `block`
+			}
 
-  recoverLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    login.style.display = 'none';
-    recover.style.display = 'block';
-  });
+			recoverLink.addEventListener(`click`, function (e) {
+				e.preventDefault()
+				login.style.display = `none`
+				recover.style.display = `block`
+			})
 
-  cancelRecoverLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    recover.style.display = 'none';
-    login.style.display = 'block';
-  });
-};
+			cancelRecoverLink.addEventListener(`click`, function (e) {
+				e.preventDefault()
+				recover.style.display = `none`
+				login.style.display = `block`
+			})
+		}
 
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+		/***/ }),
+	/* 12 */
+	/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _cart = __webpack_require__(0);
-
-exports.default = function (item) {
-  var button = item.getElementsByTagName('button')[0];
-  var decrease = item.querySelector('.js-remove-single');
-  var increase = item.querySelector('.js-add-single');
-  var currentQty = item.querySelector('.js-single-quantity').innerHTML;
-  var id = item.getAttribute('data-id');
-
-  button.addEventListener('click', function (e) {
-    e.preventDefault();
-    (0, _cart.removeAddon)(id);
-  });
-
-  decrease.addEventListener('click', function (e) {
-    e.preventDefault();
-    (0, _cart.updateAddon)(id, parseInt(currentQty) - 1);
-  });
-
-  increase.addEventListener('click', function (e) {
-    e.preventDefault();
-    (0, _cart.updateAddon)(id, parseInt(currentQty) + 1);
-  });
-};
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
+		"use strict"
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
 
-var _micromanager = __webpack_require__(31);
+		var _cart = __webpack_require__(0)
 
-var scripts = _interopRequireWildcard(_micromanager);
+		exports.default = function (item) {
+			var button = item.getElementsByTagName(`button`)[0]
+			var decrease = item.querySelector(`.js-remove-single`)
+			var increase = item.querySelector(`.js-add-single`)
+			var currentQty = item.querySelector(`.js-single-quantity`).innerHTML
+			var id = item.getAttribute(`data-id`)
 
-var _cart = __webpack_require__(0);
+			button.addEventListener(`click`, function (e) {
+				e.preventDefault();
+				(0, _cart.removeAddon)(id)
+			})
 
-var _images = __webpack_require__(8);
+			decrease.addEventListener(`click`, function (e) {
+				e.preventDefault();
+				(0, _cart.updateAddon)(id, parseInt(currentQty) - 1)
+			})
 
-var _currency = __webpack_require__(6);
+			increase.addEventListener(`click`, function (e) {
+				e.preventDefault();
+				(0, _cart.updateAddon)(id, parseInt(currentQty) + 1)
+			})
+		}
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+		/***/ }),
+	/* 13 */
+	/***/ (function(module, exports, __webpack_require__) {
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-var X = '<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;vertical-align:middle;overflow:visible;"><path d="M1.0606601717798212 1.0606601717798212 L14.939339828220179 14.939339828220179"></path><path d="M14.939339828220179 1.0606601717798212 L1.0606601717798212 14.939339828220179"></path></svg>';
-
-function createItem(_ref) {
-  var id = _ref.variant_id,
-      title = _ref.product_title,
-      price = _ref.line_price,
-      color = _ref.variant_title,
-      image = _ref.image,
-      url = _ref.url,
-      quantity = _ref.quantity,
-      item = _objectWithoutProperties(_ref, ['variant_id', 'product_title', 'line_price', 'variant_title', 'image', 'url', 'quantity']);
-
-  var img = image ? (0, _images.getSizedImageUrl)(image.replace('_' + (0, _images.imageSize)(image), ''), '200x' // TODO hacky af
-  ) : 'https://source.unsplash.com/R9OS29xJb-8/2000x1333';
-
-  return '\n<div class=\'cart-drawer__item\' data-component=\'cart-drawer-item\' data-id=' + id + '>\n  <div class=\'f aic\'>\n    <a href=\'' + url + '\'>\n      <img src=\'' + img + '\' />\n    </a>\n    <div class=\'__content pl1 f fill-y ais jcb\'>\n      <div>\n        <a href=\'' + url + '\' class=\'serif mv0 p mv0\'>' + title + '</a>\n        <div class=\'small sans track mt025 mb05 book\'>' + (0, _currency.formatMoney)(price) + '</div>\n        <div class=\'f aic\'>\n          <div class=\'cart-quantity js-remove-single px05\'>-</div>\n          <div class=\'js-single-quantity\'>' + quantity + '</div>\n          <div class=\'cart-quantity js-add-single px05\'>+</div>\n        </div>\n        ' + (color ? '<div class=\'xsmall sans caps track cm mv025 book\'>' + color.split(':')[0] + '</div>' : '') + '\n      </div>\n\n      <button class=\'button--reset\'>' + X + '</button>\n    </div>\n  </div>\n</div>\n';
-}
-
-function renderItems(items) {
-  return items.length > 0 ? items.reduce(function (markup, item) {
-    markup += createItem(item);
-    return markup;
-  }, '') : '<div class=\'pv1\'><p class=\'pv1 mv05 sans small cm i ac\'>Your cart is empty</p></div>';
-}
-
-exports.default = function (outer) {
-  var isOpen = false;
-
-  var overlay = outer.querySelector('.js-overlay');
-  var closeButton = outer.querySelector('.js-close');
-  var subtotal = outer.querySelector('.js-subtotal');
-  var itemsRoot = outer.querySelector('.js-items');
-  var loading = itemsRoot.innerHTML;
-
-  function render() {
-    (0, _cart.fetchCart)().then(function (cart) {
-      itemsRoot.innerHTML = renderItems(cart.items);
-      subtotal.innerHTML = (0, _currency.formatMoney)(cart.total_price);
-      setTimeout(function () {
-        scripts.mount();
-      }, 0);
-    });
-  }
-
-  function open() {
-    outer.classList.add('is-active');
-
-    itemsRoot.innerHTML = loading;
-
-    setTimeout(function () {
-      outer.classList.add('is-visible');
-      isOpen = true;
-      setTimeout(render, 10);
-    }, 50);
-  }
-
-  function close() {
-    outer.classList.remove('is-visible');
-
-    setTimeout(function () {
-      outer.classList.remove('is-active');
-      isOpen = false;
-    }, 400);
-  }
-
-  (0, _cart.on)('updated', function (_ref2) {
-    var cart = _ref2.cart;
-
-    isOpen ? render() : open();
-  });
-  (0, _cart.on)('addon', function (_ref3) {
-    var cart = _ref3.cart;
-
-    isOpen ? render() : open();
-  });
-  overlay.addEventListener('click', close);
-  closeButton.addEventListener('click', close);
-
-  return {
-    open: open,
-    close: close
-  };
-};
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
+		"use strict"
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
 
-exports.default = function (props) {
-  console.log('hero fired', props);
-};
+		var _micromanager = __webpack_require__(31)
 
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
+		var scripts = _interopRequireWildcard(_micromanager)
 
-"use strict";
+		var _cart = __webpack_require__(0)
+
+		var _images = __webpack_require__(8)
+
+		var _currency = __webpack_require__(6)
+
+		function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key] } } newObj.default = obj; return newObj } }
+
+		function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i] } return target }
+
+		var X = `<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;vertical-align:middle;overflow:visible;"><path d="M1.0606601717798212 1.0606601717798212 L14.939339828220179 14.939339828220179"></path><path d="M14.939339828220179 1.0606601717798212 L1.0606601717798212 14.939339828220179"></path></svg>`
+
+		function createItem(_ref) {
+			var id = _ref.variant_id,
+				title = _ref.product_title,
+				price = _ref.line_price,
+				color = _ref.variant_title,
+				image = _ref.image,
+				url = _ref.url,
+				quantity = _ref.quantity,
+				item = _objectWithoutProperties(_ref, [`variant_id`, `product_title`, `line_price`, `variant_title`, `image`, `url`, `quantity`])
+
+			var img = image ? (0, _images.getSizedImageUrl)(image.replace(`_` + (0, _images.imageSize)(image), ``), `200x`, // TODO hacky af
+			) : `https://source.unsplash.com/R9OS29xJb-8/2000x1333`
+
+			return `\n<div class='cart-drawer__item' data-component='cart-drawer-item' data-id=` + id + `>\n  <div class='f aic'>\n    <a href='` + url + `'>\n      <img src='` + img + `' />\n    </a>\n    <div class='__content pl1 f fill-y ais jcb'>\n      <div>\n        <a href='` + url + `' class='serif mv0 p mv0'>` + title + `</a>\n        <div class='small sans track mt025 mb05 book'>` + (0, _currency.formatMoney)(price) + `</div>\n        <div class='f aic'>\n          <div class='cart-quantity js-remove-single px05'>-</div>\n          <div class='js-single-quantity'>` + quantity + `</div>\n          <div class='cart-quantity js-add-single px05'>+</div>\n        </div>\n        ` + (color ? `<div class='xsmall sans caps track cm mv025 book'>` + color.split(`:`)[0] + `</div>` : ``) + `\n      </div>\n\n      <button class='button--reset'>` + X + `</button>\n    </div>\n  </div>\n</div>\n`
+		}
+
+		function renderItems(items) {
+			return items.length > 0 ? items.reduce(function (markup, item) {
+				markup += createItem(item)
+				return markup
+			}, ``) : `<div class='pv1'><p class='pv1 mv05 sans small cm i ac'>Your cart is empty</p></div>`
+		}
+
+		exports.default = function (outer) {
+			var isOpen = false
+
+			var overlay = outer.querySelector(`.js-overlay`)
+			var closeButton = outer.querySelector(`.js-close`)
+			var subtotal = outer.querySelector(`.js-subtotal`)
+			var itemsRoot = outer.querySelector(`.js-items`)
+			var loading = itemsRoot.innerHTML
+
+			function render() {
+				(0, _cart.fetchCart)().then(function (cart) {
+					itemsRoot.innerHTML = renderItems(cart.items)
+					subtotal.innerHTML = (0, _currency.formatMoney)(cart.total_price)
+					setTimeout(function () {
+						scripts.mount()
+					}, 0)
+				})
+			}
+
+			function open() {
+				outer.classList.add(`is-active`)
+
+				itemsRoot.innerHTML = loading
+
+				setTimeout(function () {
+					outer.classList.add(`is-visible`)
+					isOpen = true
+					setTimeout(render, 10)
+				}, 50)
+			}
+
+			function close() {
+				outer.classList.remove(`is-visible`)
+
+				setTimeout(function () {
+					outer.classList.remove(`is-active`)
+					isOpen = false
+				}, 400)
+			}
+
+			(0, _cart.on)(`updated`, function (_ref2) {
+				var cart = _ref2.cart
+
+				isOpen ? render() : open()
+			});
+			(0, _cart.on)(`addon`, function (_ref3) {
+				var cart = _ref3.cart
+
+				isOpen ? render() : open()
+			})
+			overlay.addEventListener(`click`, close)
+			closeButton.addEventListener(`click`, close)
+
+			return {
+				open: open,
+				close: close,
+			}
+		}
+
+		/***/ }),
+	/* 14 */
+	/***/ (function(module, exports, __webpack_require__) {
+
+		"use strict"
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
 
-exports.default = function (wrapper) {
-  var input = wrapper.getElementsByTagName('input')[0];
+		exports.default = function (props) {
+			console.log(`hero fired`, props)
+		}
 
-  function handleAddRemove(e) {
-    e.target.value ? add() : remove();
-  }
+		/***/ }),
+	/* 15 */
+	/***/ (function(module, exports, __webpack_require__) {
 
-  function add() {
-    wrapper.classList.add('has-value');
-  }
-
-  function remove() {
-    wrapper.classList.remove('has-value');
-  }
-
-  input.addEventListener('change', handleAddRemove);
-  input.addEventListener('blur', handleAddRemove);
-  input.addEventListener('focus', add);
-
-  return {
-    unmount: function unmount() {
-      input.removeEventListener('change', handleAddRemove);
-      input.removeEventListener('blur', handleAddRemove);
-      input.removeEventListener('focus', add);
-    }
-  };
-};
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
+		"use strict"
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
 
-var _cart = __webpack_require__(0);
+		exports.default = function (wrapper) {
+			var input = wrapper.getElementsByTagName(`input`)[0]
 
-exports.default = function (el) {
-  var _JSON$parse = JSON.parse(el.querySelector('.js-product-json').innerHTML),
-      selectedOrFirstAvailableVariant = _JSON$parse.selectedOrFirstAvailableVariant,
-      product = _JSON$parse.product;
+			function handleAddRemove(e) {
+				e.target.value ? add() : remove()
+			}
 
-  var currentVariant = product.variants.filter(function (v) {
-    return v.id === selectedOrFirstAvailableVariant;
-  })[0];
+			function add() {
+				wrapper.classList.add(`has-value`)
+			}
 
-  /**
+			function remove() {
+				wrapper.classList.remove(`has-value`)
+			}
+
+			input.addEventListener(`change`, handleAddRemove)
+			input.addEventListener(`blur`, handleAddRemove)
+			input.addEventListener(`focus`, add)
+
+			return {
+				unmount: function unmount() {
+					input.removeEventListener(`change`, handleAddRemove)
+					input.removeEventListener(`blur`, handleAddRemove)
+					input.removeEventListener(`focus`, add)
+				},
+			}
+		}
+
+		/***/ }),
+	/* 16 */
+	/***/ (function(module, exports, __webpack_require__) {
+
+		"use strict"
+
+
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
+
+		var _cart = __webpack_require__(0)
+
+		exports.default = function (el) {
+			var _JSON$parse = JSON.parse(el.querySelector(`.js-product-json`).innerHTML),
+				selectedOrFirstAvailableVariant = _JSON$parse.selectedOrFirstAvailableVariant,
+				product = _JSON$parse.product
+
+			var currentVariant = product.variants.filter(function (v) {
+				return v.id === selectedOrFirstAvailableVariant
+			})[0]
+
+			/**
    * Adding products to cart
    */
-  var form = el.getElementsByTagName('form')[0];
-  var submit = form.querySelector('.js-submit-cart');
-  var quantity = form.querySelector('.js-quantity').value;
+			var form = el.getElementsByTagName(`form`)[0]
+			var submit = form.querySelector(`.js-submit-cart`)
+			var quantity = form.querySelector(`.js-quantity`).value
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+			form.addEventListener(`submit`, function (e) {
+				e.preventDefault()
 
-    submit.disabled = true;
-    (0, _cart.addVariant)(currentVariant, quantity).then(function (_ref) {
-      var item = _ref.item,
-          cart = _ref.cart;
+				submit.disabled = true;
+				(0, _cart.addVariant)(currentVariant, quantity).then(function (_ref) {
+					var item = _ref.item,
+						cart = _ref.cart
 
-      submit.disabled = false;
-    }).catch(function (e) {
-      submit.disabled = false;
-      /* eslint-disable */
+					submit.disabled = false
+				}).catch(function (e) {
+					submit.disabled = false
+					/* eslint-disable */
       alert(e);
       /* eslint-enable */
-    });
-  });
-};
+				})
+			})
+		}
 
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
+		/***/ }),
+	/* 17 */
+	/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _productSelector = __webpack_require__(5);
-
-var _productSelector2 = _interopRequireDefault(_productSelector);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (el) {
-  var selector = (0, _productSelector2.default)();
-
-  selector.on('update', function (variant) {
-    console.log(variant);
-  });
-};
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
+		"use strict"
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-// /**
-//  * Product Template Script
-//  * ------------------------------------------------------------------------------
-//  * A file that contains scripts highly couple code to the Product template.
-//  *
-//    * @namespace product
-//  */
-//
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
+
+		var _productSelector = __webpack_require__(5)
+
+		var _productSelector2 = _interopRequireDefault(_productSelector)
+
+		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj } }
+
+		exports.default = function (el) {
+			var selector = (0, _productSelector2.default)()
+
+			selector.on(`update`, function (variant) {
+				console.log(variant)
+			})
+		}
+
+		/***/ }),
+	/* 18 */
+	/***/ (function(module, exports, __webpack_require__) {
+
+		"use strict"
+
+
+		Object.defineProperty(exports, `__esModule`, {
+			value: true,
+		})
+		// /**
+		//  * Product Template Script
+		//  * ------------------------------------------------------------------------------
+		//  * A file that contains scripts highly couple code to the Product template.
+		//  *
+		//    * @namespace product
+		//  */
+		//
 /* eslint-disable */
 
 console.log('hi');
