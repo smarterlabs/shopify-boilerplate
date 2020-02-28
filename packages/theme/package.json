@@ -2,15 +2,16 @@
   "name": "theme",
   "version": "1.0.0",
   "scripts": {
-    "dev": "slater watch",
+    "build": "dotenv -e ../../.env -- slater build",
+    "deploy": "yarn run deploy:development",
+    "deploy:development": "dotenv -e ../../.env -- slater build && dotenv -e ../../.env -- slater sync --theme development",
+    "deploy:production": "dotenv -e ../../.env -- slater build && dotenv -e ../../.env -- slater sync --theme production",
+    "dev": "dotenv -e ../../.env -- slater watch",
     "start": "yarn run start",
-    "build": "slater build",
-    "deploy:development": "slater build && slater sync",
-    "deploy:production": "slater build && slater sync --theme production",
-    "test:start": "slater watch --config test.config.js",
-    "test:build": "slater build --config test.config.js",
-    "test:deploy": "slater build --config test.config.js && slater sync --config test.config.js",
-    "test:deploy:production": "slater build --config test.config.js && slater sync --theme production --config test.config.js"
+    "test:start": "dotenv -e ../../.env -- slater watch --config test.config.js",
+    "test:build": "dotenv -e ../../.env -- slater build --config test.config.js",
+    "test:deploy": "dotenv -e ../../.env -- slater build --config test.config.js && dotenv -e ../../.env -- slater sync --theme development --config test.config.js",
+    "test:deploy:production": "dotenv -e ../../.env -- slater build --config test.config.js && dotenv -e ../../.env -- slater sync --theme production --config test.config.js"
   },
   "author": "https://smarterlabs.com",
   "devDependencies": {
