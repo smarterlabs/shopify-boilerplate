@@ -1,11 +1,11 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Slater",
+    "theme_name": "Smarter Labs",
     "theme_version": "1.0.0",
-    "theme_author": "The Couch",
-    "theme_documentation_url": "https://github.com/the-couch/slater-theme",
-    "theme_support_url": "https://github.com/the-couch/slater-theme"
+    "theme_author": "Smarter Labs",
+    "theme_documentation_url": "https://smarterlabs.com",
+    "theme_support_url": "https://smarterlabs.com"
   },
   {
     "name": "Typography",

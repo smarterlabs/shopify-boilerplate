@@ -1,6 +1,6 @@
 .slater-product {
   padding: 32px 0;
-  @media (--1000) {
+  @media (min-width: 1000px) {
     > div {
       width: 48%;
     }
