@@ -1,11 +1,11 @@
 {
   "name": "@theme/js",
   "version": "1.0.0",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --output ../theme/build/assets/index.js --mode production",
-    "dev": "webpack --output ../theme/build/assets/index.js --watch --mode development"
+    "build": "webpack --output dist/index.js --mode production",
+    "dev": "webpack --output dist/index.js --watch --mode development"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",

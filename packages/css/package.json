@@ -2,12 +2,12 @@
   "name": "@theme/css",
   "version": "1.0.0",
   "author": "https://smarterlabs.com",
-  "main": "dist/style.css",
+  "main": "dist/index.css",
   "license": "MIT",
   "scripts": {
-    "build": "postcss src/index.css --dir ../theme/build/assets --map",
+    "build": "postcss src/index.css --dir dist --map",
     "clean": "rm -rf dist",
-    "dev": "yarn build && postcss src/index.css --dir ../theme/build/assets --map --watch"
+    "dev": "yarn build && postcss src/index.css --dir dist --map --watch"
   },
   "browserslist": [
     "last 2 versions"

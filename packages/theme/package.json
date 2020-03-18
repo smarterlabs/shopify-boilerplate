@@ -2,11 +2,17 @@
   "name": "@theme/theme",
   "version": "1.0.0",
   "scripts": {
-    "build": "dotenv -e ../../.env -- slater build",
+    "build": "yarn run build:slater",
+    "build:css": "cpx \"../css/dist/**/*\" \"build/assets\"",
+    "build:js": "cpx \"../js/dist/**/*\" \"build/assets\"",
+    "build:slater": "dotenv -e ../../.env -- slater build",
     "deploy": "yarn run deploy:development",
     "deploy:development": "dotenv -e ../../.env -- slater build && dotenv -e ../../.env -- slater sync --theme development",
     "deploy:production": "dotenv -e ../../.env -- slater build && dotenv -e ../../.env -- slater sync --theme production",
-    "dev": "dotenv -e ../../.env -- slater watch",
+    "dev": "yarn run dev:slater",
+    "dev:css": "cpx \"../css/dist/**/*\" \"build/assets\" --watch",
+    "dev:js": "cpx \"../js/dist/**/*\" \"build/assets\" --watch",
+    "dev:slater": "dotenv -e ../../.env -- slater watch",
     "start": "yarn run start",
     "test:start": "dotenv -e ../../.env -- slater watch --config test.config.js",
     "test:build": "dotenv -e ../../.env -- slater build --config test.config.js",
@@ -17,6 +23,7 @@
   "devDependencies": {
     "@theme/css": "*",
     "@theme/js": "*",
+    "cpx": "^1.5.0",
     "slater": "^1.7.1"
   },
   "dependencies": {
