@@ -5,9 +5,9 @@
   "main": "dist/style.css",
   "license": "MIT",
   "scripts": {
-    "build": "postcss src/style.css --dir dist --map",
+    "build": "postcss src/index.css --dir ../theme/build/assets --map",
     "clean": "rm -rf dist",
-    "dev": "yarn build && postcss src/style.css --dir dist --map --watch"
+    "dev": "yarn build && postcss src/index.css --dir ../theme/build/assets --map --watch"
   },
   "browserslist": [
     "last 2 versions"
