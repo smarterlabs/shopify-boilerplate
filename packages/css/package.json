@@ -1,0 +1,23 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "author": "https://smarterlabs.com",
+  "main": "dist/style.css",
+  "license": "MIT",
+  "scripts": {
+    "build": "postcss src/style.css -d dist --map",
+    "clean": "rm -rf dist"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1"
+  },
+  "dependencies": {
+    "modern-css-reset": "^1.1.0"
+  }
+}

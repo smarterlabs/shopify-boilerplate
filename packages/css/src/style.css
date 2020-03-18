@@ -1,0 +1,6 @@
+@import 'modern-css-reset';
+@import './button.css';
+
+.root {
+	display: flex;
+}

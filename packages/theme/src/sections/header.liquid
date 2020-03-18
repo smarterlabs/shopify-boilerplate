@@ -1,27 +1,93 @@
-{% comment %}
-  Considerations for the header:
-    1. Schema.org tags
-      - <h1 itemscope itemtype='http://schema.org/Organization'>
-      - itemprop [url, logo] etc
-{% endcomment %}
+<!-- Top Nav Bar -->
 
-<header role='banner' id='header' data-component='header' class='slater-header z8 fix left top x bg-white'>
-  <div class='outer'>
-    <div class='container--l mxa'>
-      <div class='slater-header__inner f jcb aic'>
-        <h1 itemscope itemtype='http://schema.org/Organization' class='p'>
-          <a href='/'>slater</a>
-        </h1>
+<nav role="navigation">
 
-        <div class='f jcb fw'>
-          <a href='/cart' class='block js-cart-drawer-toggle'>
-            Cart
-            (<span class='js-cart-count'>{{ cart.item_count }}</span>)
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+	{% include 'button', text: 'Click me' %}
 
-<div class='slater-header__spacer'></div>
+	<h1>
+		<a href="/">{{ shop.name }}</a>
+	</h1>
+
+	<section>
+
+		<!-- This is where the main menu links render-->
+		<ul class="has-dropdown">
+			{% for link in linklists.main-menu.links %}
+			{% assign has_sub_menu = false %}
+			{% assign has_sub_categories = false %}
+			{% assign parent_link_active = false %}
+			{% assign child_list_handle = link.title | handle %}
+			{% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
+			{% assign has_sub_menu = true %}
+			{% for l in linklists[child_list_handle].links %}
+			{% if page_title == l.title %}
+			{% assign parent_link_active = true %}
+			{% endif %}
+			{% endfor %}
+			{% elsif link.type == 'collection_link' and link.object.all_tags.size > 0 %}
+			{% assign has_sub_categories = true %}
+			{% endif %}
+			<li class="nav-item{% if forloop.first %} first{% elsif forloop.last %} last{% endif %}{% if link.active or parent_link_active %} active{% endif %}{% if has_sub_menu or has_sub_categories %} has-dropdown{% endif %}"
+				{% if has_sub_menu or has_sub_categories %} data-dropdown="drop-{{ forloop.index}}" {% endif %}>
+				{{ link.title | link_to: link.url }}
+				{% if has_sub_menu or has_sub_categories %}
+				<ul class="f-dropdown dropdown" id="drop-{{ forloop.index }}">
+					{% if has_sub_menu %}
+					{% for l in linklists[child_list_handle].links %}
+					<li
+						class="{% if forloop.first %} first{% elsif forloop.last %} last{% endif %}{% if l.active %} active{% endif %}">
+						<a class="{% if forloop.first %}first{% elsif forloop.last %}last{% endif %}"
+							href="{{ l.url }}">{{ l.title }}</a>
+					</li>
+					{% endfor %}
+					{% elsif has_sub_categories %}
+					{% for tag in link.object.all_tags %}
+					<li
+						class="{% if forloop.first %} first{% elsif forloop.last %} last{% endif %}{% if current_tags contains tag %} active{% endif %}">
+						<a class="{% if forloop.first %}first{% elsif forloop.last %}last{% endif %}"
+							href="{{ link.url }}/{{ tag | handle }}">{{ tag }}</a>
+					</li>
+					{% endfor %}
+					{% endif %}
+				</ul>
+				{% endif %}
+			</li>
+			{% endfor %}
+		</ul>
+
+		<!-- This is where the search and cart total live in the default setup -->
+		<ul>
+			<li>
+				<a href="/cart" data-tooltip data-options="disable_for_touch:true" class="has-tip tip-bottom noradius"
+					title="{{ cart.total_price | money }}" style="border-bottom:0;">
+					{{ cart.item_count }}
+					{{ cart.item_count | pluralize: 'item', 'items' }}
+				</a>
+			</li>
+
+			{% if cart.item_count > 0 %}
+				<li class="has-form">
+					<a class="button" href="/checkout">Check Out</a>
+				</li>
+			{% endif %}
+
+			<!-- Search Form -->
+			<li class="has-form">
+				<form action="/search" method="get" class="search-form" role="search">
+					<div>
+						<input name="q" type="text" placeholder="Search...">
+					</div>
+					<div>
+						<input class="button" type="submit" id="search-submit" value="Search" />
+					</div>
+				</form>
+			</li>
+			<!-- End Search Form -->
+
+		</ul>
+
+	</section>
+
+</nav>
+
+<!-- End Top Nav Bar -->
