@@ -1,5 +1,5 @@
 {
-  "name": "theme",
+  "name": "@theme/theme",
   "version": "1.0.0",
   "scripts": {
     "build": "dotenv -e ../../.env -- slater build",
@@ -15,6 +15,8 @@
   },
   "author": "https://smarterlabs.com",
   "devDependencies": {
+    "@theme/css": "*",
+    "@theme/js": "*",
     "slater": "^1.7.1"
   },
   "dependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "css",
+  "name": "@theme/css",
   "version": "1.0.0",
   "author": "https://smarterlabs.com",
   "main": "dist/style.css",
