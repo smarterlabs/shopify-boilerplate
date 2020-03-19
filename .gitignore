@@ -18,6 +18,7 @@ dist
 dist-*
 build
 public
+storybook-static
 .cache
 .serverless
 _optimize
