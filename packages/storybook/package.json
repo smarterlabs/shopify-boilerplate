@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@storybook/addon-viewport": "^5.3.17",
+    "storybook-addon-styles": "^1.1.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@storybook/addons": "^5.3.17",

@@ -1,8 +1,23 @@
-export default {
-	title: `Headers`,
-}
+import { storiesOf } from '@storybook/html'
 
-export const Header1 = () => `<h1>Header 1</h1>`
-export const Header2 = () => `<h2>Header 2</h2>`
-export const Header3 = () => `<h3>Header 3</h3>`
-export const Header4 = () => `<h4>Header 4</h4>`
+storiesOf(`Headers`, module)
+	.addParameters({
+		styles: {
+			height: `100vh`,
+			display: `flex`,
+			alignItems: `center`,
+			justifyContent: `center`,
+		},
+	})
+	.add(`Header1`, () => `
+		<h1>Header 1</h1>
+	`)
+	.add(`Header2`, () => `
+		<h1>Header 2</h1>
+	`)
+	.add(`Header3`, () => `
+		<h1>Header 3</h1>
+	`)
+	.add(`Header4`, () => `
+		<h1>Header 4</h1>
+	`)
