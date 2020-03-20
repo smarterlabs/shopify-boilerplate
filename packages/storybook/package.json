@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "start-storybook -s \"../theme/src/snippets\" -p 6006",
+    "build": "build-storybook"
+  },
   "dependencies": {
     "@storybook/addon-viewport": "^5.3.17",
     "liquidjs": "^9.11.3",
@@ -17,9 +21,5 @@
     "@storybook/theming": "^5.3.17",
     "@theme/css": "*",
     "babel-loader": "^8.0.6"
-  },
-  "scripts": {
-    "dev": "start-storybook -p 6006",
-    "build": "build-storybook"
   }
 }
