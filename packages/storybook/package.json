@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@storybook/addon-viewport": "^5.3.17",
+    "liquidjs": "^9.11.3",
     "storybook-addon-styles": "^1.1.0"
   },
   "devDependencies": {
