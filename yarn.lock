@@ -5042,6 +5042,11 @@ commander@2.17.x:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
   integrity sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==
 
+commander@^10.0.0:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-10.0.1.tgz#881ee46b4f77d1c1dccc5823433aa39b022cbe06"
+  integrity sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==
+
 commander@^2.11.0, commander@^2.19.0, commander@^2.20.0, commander@~2.20.3:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
@@ -9935,10 +9940,12 @@ lint-staged@^9.2.1:
     string-argv "^0.3.0"
     stringify-object "^3.3.0"
 
-liquidjs@^9.11.3:
-  version "9.11.3"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.11.3.tgz#a453f9f78a23dae990767a28b0b9e8f4e480770b"
-  integrity sha512-L/Xf6VuBeFw/PkBZUUr20pO0awxg7RHMJXuGIlwxXvSjg98UsG7Q8YtfTE0wTRXqnOfpwogtohpljvBdRO4fgg==
+liquidjs@^10.25.0:
+  version "10.25.0"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-10.25.0.tgz#a5ec7063c3202348dc5988343502ad27072f4997"
+  integrity sha512-XpO7AiGULTG4xcTlwkcTI5JreFG7b6esLCLp+aUSh7YuQErJZEoUXre9u9rbdb0057pfWG4l0VursvLd5Q/eAw==
+  dependencies:
+    commander "^10.0.0"
 
 listenercount@~1.0.1:
   version "1.0.1"
